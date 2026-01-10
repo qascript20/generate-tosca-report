@@ -26,8 +26,8 @@ The process follows a strictly automated pipeline to ensure data integrity and e
 
 ## 📖 How to Use
 
-1. Execute Tests: Double-click Execute.bat.
-2. Generate HTML Report: Execute the following command
+1. **Execute Tests**: Double-click Execute.bat.
+2. **Generate HTML Report**: Execute the following command
    ```python
    python tosca_parser.py
    ```
@@ -36,8 +36,8 @@ The process follows a strictly automated pipeline to ensure data integrity and e
 
 ## 💻 Requirements
 
-1. Tricentis Tosca (v16 or higher recommended)
-2. Python 3.x
+1. **Tricentis Tosca (v16 or higher recommended)**
+2. **Python 3.x**
 
 
 ---
@@ -59,7 +59,7 @@ PATHS = {
 
 ## 📄 License
 
-© 2026 QASCRIPT | www.qascript.com
+**© 2026 QASCRIPT | www.qascript.com**
 
 All rights reserved.
 
