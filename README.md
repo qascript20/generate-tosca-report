@@ -33,8 +33,8 @@ The process follows a strictly automated pipeline to ensure data integrity and e
 
 ## 💻 Requirements
 
-Tricentis Tosca (v16 or higher recommended)
-Python 3.x
+1. Tricentis Tosca (v16 or higher recommended)
+2. Python 3.x
 
 
 ---
