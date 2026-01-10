@@ -51,7 +51,12 @@ PATHS = {
     "output_file": "ToscaReport.html"
 }
 
+```
 ---
 
+## 📄 License
 
+© 2026 QASCRIPT | www.qascript.com
+
+All rights reserved.
 
