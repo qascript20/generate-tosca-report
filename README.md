@@ -27,7 +27,10 @@ The process follows a strictly automated pipeline to ensure data integrity and e
 ## 📖 How to Use
 
 1. Execute Tests: Double-click Execute.bat.
-2. Generate Report: Run the command: python tosca_parser.py
+2. Generate HTML Report: Execute the following command
+   ```python
+   python tosca_parser.py
+   ```
 
 ---
 
