@@ -1,0 +1,1 @@
+"D:\Program Files\TRICENTIS\Tosca Testsuite\ToscaCommander\TCShell.exe" -workspace "D:\Tosca_Projects\Tosca_Workspaces\Training\Training.tws" -login "" "" "D:\Tosca\Batch\First.tcs"

@@ -1,0 +1,5 @@
+JumpToNode "/Execution/ExecutionLists/Results"
+
+For =>SUBPARTS:ExecutionList CallonEach "D:\\Tosca\\Batch\\GetIndividualResult.tcs"
+
+Exit

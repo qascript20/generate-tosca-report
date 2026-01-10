@@ -1,0 +1,38 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tosca Execution Dashboard</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <style>
+            body { font-family: 'Segoe UI', sans-serif; background: #f8f9fa; padding: 20px; }
+            .container { max-width: 1100px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+            h1 { color: #0056b3; text-align: center; border-bottom: 3px solid #0056b3; padding-bottom: 10px; }
+            table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
+            th, td { padding: 12px; border: 1px solid #dee2e6; text-align: center; }
+            .pass { color: #28a745; font-weight: bold; }
+            .fail { color: #dc3545; font-weight: bold; }
+            .charts-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+            .chart-card { border: 1px solid #eee; padding: 15px; width: 280px; text-align: center; }
+            .chart-wrapper { height: 200px; }
+            footer { text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 0.9em; color: #666; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Tosca Execution Dashboard</h1>
+            <p style="text-align:right; font-size:0.8em; color:#999;">Generated: 2026-01-10 15:53:16</p>
+            <table>
+                <thead><tr><th>Execution Lists</th><th>Passed</th><th>Failed</th></tr></thead>
+                <tbody><tr><td>Execution List #1</td><td class='pass'>1</td><td class='fail'>0</td></tr><tr><td>Execution List #2</td><td class='pass'>3</td><td class='fail'>2</td></tr></tbody>
+            </table>
+            <div class="charts-grid"><div class="chart-card"><h3>Execution List #1</h3><div class="chart-wrapper"><canvas id="chart_1"></canvas></div></div><div class="chart-card"><h3>Execution List #2</h3><div class="chart-wrapper"><canvas id="chart_2"></canvas></div></div></div>
+            <footer>
+                &copy; 2026 <strong>QASCRIPT</strong> | <a href="https://www.qascript.com/">www.qascript.com</a>
+            </footer>
+        </div>
+        <script>new Chart(document.getElementById('chart_1'), { type: 'pie', data: { labels: ['Passed', 'Failed'], datasets: [{ data: [1, 0], backgroundColor: ['#28a745', '#dc3545'], borderWidth: 2 }] }, options: { responsive: true, maintainAspectRatio: false } });new Chart(document.getElementById('chart_2'), { type: 'pie', data: { labels: ['Passed', 'Failed'], datasets: [{ data: [3, 2], backgroundColor: ['#28a745', '#dc3545'], borderWidth: 2 }] }, options: { responsive: true, maintainAspectRatio: false } });</script>
+    </body>
+    </html>
+    
