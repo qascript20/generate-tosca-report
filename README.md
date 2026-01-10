@@ -1,22 +1,57 @@
-# generate-tosca-report
+# Tosca Execution Dashboard Generator
 
-This repository contains resources to generate a customized Tosca execution dashboard which contains results of different execution lists. It also provides number of tests passed, failed and pie charts for each execution list.
+This repository contains the resources needed to generate a customized, professional Tosca execution dashboard. It parses results from multiple execution lists to provide test counts (Passed/Failed) and visual analytics via interactive pie charts.
 
-## Contents
+## 📋 Contents
 
-- `GetResults.tcs` - jumps to the execution list folder on which we need to perform the action and calls the GetIndividualResult.tcs which will be performing the final action
-- `GetIndividualResult.tcs` - gets number of test cases passed and failed for execution list
-- `Results/` - directory where generated report files are stored
-- `SchedulerBatchFile.bat` - triggers the TCShell.exe, will login into the workspace and triggers GetResults.tcs
-- `Execute.bat` - triggers SchedulerBatchFile.bat file and stores results in Results/ExecutionList.txt 
+* **tosca_parser.py**: The core Python script that parses the raw log and generates the HTML dashboard.
+* **GetResults.tcs**: A Tosca Shell script that navigates to the execution list folders and calls the individual result fetcher.
+* **GetIndividualResult.tcs**: The specific action script that extracts the number of passed and failed test cases.
+* **Results/**: The directory where the generated `.txt` logs and final `.html` report files are stored.
+* **SchedulerBatchFile.bat**: Triggers `TCShell.exe`, handles workspace login, and initiates the `GetResults.tcs` script.
+* **Execute.bat**: The main entry point. It runs the scheduler and ensures results are saved to `Results/ExecutionResult.txt`.
 
-## Usage
+---
 
-1. Double click the Execute.bat
-2. ExecutionResult.txt file will be created in Results/ directory
-3. Execute the following command to generate html report: python tosca_parser.py 
+## 🚀 Workflow
 
-## Requirements
+The process follows a strictly automated pipeline to ensure data integrity and ease of use:
 
-- Tricentis Tosca
-- Python 
+1. **Tosca Execution**: `Execute.bat` runs the scripts via TCShell.
+2. **Log Generation**: Raw counts are saved to `ExecutionResult.txt`.
+3. **Data Parsing**: `tosca_parser.py` reads the text file and calculates metrics.
+4. **Visualization**: An HTML dashboard is generated with responsive pie charts.
+
+---
+
+## 📖 How to Use
+
+1. Execute Tests: Double-click Execute.bat.
+2. Generate Report: Run the command: python tosca_parser.py
+
+---
+
+## 💻 Requirements
+
+Tricentis Tosca (v13.0 or higher recommended)
+Python 3.x
+
+
+---
+
+## ⚙️ Configuration
+
+Before running, ensure the paths in `tosca_parser.py` match your local environment:
+
+```python
+# tosca_parser.py
+PATHS = {
+    "base_dir": r"D:\Tosca\Batch\Results",
+    "input_file": "ExecutionResult.txt",
+    "output_file": "ToscaReport.html"
+}
+
+---
+
+
+
