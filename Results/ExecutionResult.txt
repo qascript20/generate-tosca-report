@@ -1,5 +1,5 @@
 
-D:\Tosca\Batch>"D:\Program Files\TRICENTIS\Tosca Testsuite\ToscaCommander\TCShell.exe" -workspace "D:\Tosca_Projects\Tosca_Workspaces\Training\Training.tws" -login "" "" "D:\Tosca\Batch\First.tcs" 
+D:\Tosca\Batch>"D:\Program Files\TRICENTIS\Tosca Testsuite\ToscaCommander\TCShell.exe" -workspace "D:\Tosca_Projects\Tosca_Workspaces\Training\Training.tws" -login "" "" "D:\Tosca\Batch\GetResults.tcs" 
 Checking License ... License found!
 NumberOfTestCasesPassed: 1
 NumberOfTestCasesFailed: 0
